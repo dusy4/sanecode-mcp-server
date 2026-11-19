@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "co.sanecode/sanecode",
+  "title": "SaneCode",
+  "description": "Several Claude desktop accounts on one Windows PC: see each account's usage limits and resets, move a conversation to an account with room, fail over when one runs out, schedule Continue after the reset.",
+  "websiteUrl": "https://sanecode.co/docs/use-sanecode-from-chatgpt-claude-and-other-ai-apps/",
+  "repository": {
+    "url": "https://github.com/dusy4/sanecode-mcp-server",
+    "source": "github"
+  },
+  "version": "0.2.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.sanecode.co/mcp"
+    }
+  ]
+}

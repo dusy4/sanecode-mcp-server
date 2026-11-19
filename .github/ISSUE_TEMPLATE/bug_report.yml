@@ -1,0 +1,37 @@
+name: Bug report
+description: A problem with the MCP server, a tool text, the remote server or the demo.
+labels: [bug]
+body:
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where
+      options:
+        - Remote server (mcp.sanecode.co)
+        - Inside SaneCode (sanecode.exe --mcp)
+        - Demo host or this repo's code
+    validations:
+      required: true
+  - type: input
+    id: client
+    attributes:
+      label: MCP client
+      placeholder: ChatGPT, Claude.ai, Claude Code 2.x, Cursor, MCP Inspector...
+    validations:
+      required: true
+  - type: input
+    id: tool
+    attributes:
+      label: Tool
+      placeholder: sanecode_accounts_and_limits
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what you expected
+      description: Leave out real account names, emails and tokens.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: SaneCode version (Settings → Help), if it's about the app

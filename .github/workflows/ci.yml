@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo test --locked
+      - name: tools.json matches the code
+        run: |
+          cargo run --quiet --locked --bin sanecode-mcp-demo -- --describe > /tmp/describe.json
+          python3 -c "import json,sys; a=json.load(open('/tmp/describe.json')); b=json.load(open('tools.json')); sys.exit(0 if a==b else 'tools.json differs from --describe')"
+      - name: docs/tools.md is up to date
+        run: |
+          python3 scripts/tools_md.py
+          git diff --exit-code docs/tools.md

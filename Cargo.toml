@@ -1,0 +1,28 @@
+[package]
+name = "sanecode-mcp"
+version = "0.2.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+description = "The MCP server of SaneCode, the Windows app that runs several Claude desktop accounts at once: usage limits, failover between accounts, continue after the reset."
+homepage = "https://sanecode.co/docs/let-claude-use-sanecode-mcp-failover/"
+repository = "https://github.com/dusy4/sanecode-mcp-server"
+documentation = "https://sanecode.co/docs/use-sanecode-from-chatgpt-claude-and-other-ai-apps/"
+readme = "README.md"
+keywords = ["mcp", "claude", "model-context-protocol", "claude-code", "usage-limits"]
+categories = ["development-tools", "command-line-utilities"]
+publish = false
+
+[lib]
+name = "sanecode_mcp"
+path = "src/lib.rs"
+
+[[bin]]
+name = "sanecode-mcp-demo"
+path = "src/bin/demo.rs"
+
+[dependencies]
+serde_json = { version = "1", features = ["preserve_order"] }
+
+# A standalone crate (also when cloned inside another workspace).
+[workspace]

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Help with the SaneCode app
+    url: https://sanecode.co/docs/
+    about: Guides and FAQ for SaneCode. Questions about your account or Pro go to hello@sanecode.co.
+  - name: Security vulnerability
+    url: https://github.com/dusy4/sanecode-mcp-server/blob/main/SECURITY.md
+    about: Please report vulnerabilities privately to hello@sanecode.co.
