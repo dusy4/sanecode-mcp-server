@@ -1,27 +1,27 @@
 # SaneCode MCP server
 
-SaneCode is a Windows app that runs several Claude accounts at the same time, each in the
-official Claude desktop app, docked side by side in one window. Its MCP server lets Claude,
-ChatGPT and other AI apps see every account's usage limits and keep your work going when one
+SaneCode is a Windows app that allows you to run several Claude Desktop accounts at the same time without having to constantly relogin, each in the
+official Claude desktop app. Its MCP server lets Claude,
+ChatGPT and other AI apps and agents see every account's usage limits and keep your work going when one
 runs out. Download and full documentation: **[sanecode.co](https://sanecode.co)**.
 
 This repository holds the protocol layer and the tool definitions SaneCode ships, plus a demo
 host with made-up accounts you can try in any MCP client. The SaneCode app and the remote server
 are not open source.
 
-## What can an AI app do with SaneCode?
+## What can an AI app do with SaneCode MCP?
 
-With the SaneCode MCP server, Claude (inside each of your accounts) or any AI app that speaks MCP
+With the SaneCode MCP server, Claude Desktop running on your computer(inside each of your accounts) or any AI app that speaks MCP
 can:
 
 - **See usage limits and resets**: which accounts are running and signed in, which one hit its
   limit and when it resets.
 - **See sessions**: Claude Code sessions across accounts, by title, folder and time.
-- **Report overnight activity**: what SaneCode moved, typed or scheduled while you were away.
+- **Report overnight activity**: what SaneCode moved, typed or scheduled while you were away(SaneCode automations allow you to nudge a session after a session limit reset, to continue work going even after you're away or asleep).
 - **Set a failover**: when one account hits its limit, the same conversation continues in
-  another account, and moves back after the reset.
-- **Move a conversation now** to an account with room left.
-- **Schedule Continue after the reset**: type a prompt into a Claude at the reset or at a time.
+  another account, and moves back after the reset. SaneCode automations make it possible.
+- **Move a conversation now** to an account with free usage limits room left.
+- **Schedule Continue after the reset**: type a prompt into a Claude at the reset or at a time defined by you.
 - **Type a prompt into an account**: your own words, into that account's Claude.
 - **Show accounts side by side**: one, a split of two, or a grid of four.
 
